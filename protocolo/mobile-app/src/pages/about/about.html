@@ -1,11 +1,21 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
+    <ion-title>Cadastro de Protocolos</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <h2>Preencha os dados abaixo e clique em Cadastrar.</h2>
+  <p>
+    Essa é a lista de Protocolos:
+  </p>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Nome do Beneficiário" [(ngModel)]="protocol.nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="Descrição" [(ngModel)]="protocol.descricao"></ion-input>
+    </ion-item>
+    <button ion-button full (click)="saveProtocolo(protocol)" block>Cadastrar</button>
 
 </ion-content>

@@ -45,11 +45,11 @@ export class HomePage {
 
   onProtocoloSelected(protocolo: Protocolos){
     let alert = this.alertCtrl.create({
-      title: 'Informações do Filme:',
-      subTitle: `Id: ${protocolo.id}
-      Protocolo: ${protocolo.protocolo}
-      Nome: ${protocolo.nome}
-      Descricao: ${protocolo.descricao} `,
+      title: 'Informações do Protocolo:',
+      subTitle: `<br><b>Id: </b>${protocolo.id}<br>
+      <b>Protocolo:</b> <i>${protocolo.protocolo}</i><br>
+      <b>Nome:</b> ${protocolo.nome}<br>
+      <b>Descrição:</b> ${protocolo.descricao} `,
       buttons: ['Ok']
     });
     alert.present();
