@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Lista de Protocolos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Bem vindo a lista de Protocolos!</h2>
+  <p>
+    Essa é a lista de Protocolos:
+  </p>
+  <ion-list>
+    <button ion-item *ngFor="let protocolo of _protocolos;trackBy:protocolo?.id" (click)="onProtocoloSelected(protocolo)">
+        <h2>{{protocolo.nome}}</h2>
+        <p>{{protocolo.descricao}}</p>
+    </button>
+  </ion-list>
+</ion-content>
